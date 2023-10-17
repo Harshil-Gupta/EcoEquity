@@ -1,4 +1,4 @@
-package com.eurekaserver.ecoequity;
+package com.eureka.EcoEquity;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

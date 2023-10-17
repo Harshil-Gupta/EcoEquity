@@ -86,8 +86,9 @@
           <tags>persp.editorOnboardingCommand:Find Actions$$$Ctrl+3</tags>
           <tags>persp.editorOnboardingCommand:Show Key Assist$$$Ctrl+Shift+L</tags>
           <tags>persp.editorOnboardingCommand:New$$$Ctrl+N</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_kDh85WkIEe6Ar7yKiQ6GeA" selectedElement="_kDh88mkIEe6Ar7yKiQ6GeA" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_kDh85WkIEe6Ar7yKiQ6GeA" selectedElement="_kDh85mkIEe6Ar7yKiQ6GeA" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="_kDh85mkIEe6Ar7yKiQ6GeA" elementId="topLeft" containerData="3067" selectedElement="_kDh852kIEe6Ar7yKiQ6GeA">
+              <tags>active</tags>
               <children xsi:type="advanced:Placeholder" xmi:id="_kDh852kIEe6Ar7yKiQ6GeA" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_kDncemkIEe6Ar7yKiQ6GeA" closeable="true">
                 <tags>View</tags>
                 <tags>categoryTag:General</tags>
@@ -261,7 +262,6 @@
       <children xsi:type="basic:PartStack" xmi:id="_kDnccWkIEe6Ar7yKiQ6GeA" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_hV-SkGmZEe6dZt5eBLnDAQ">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
-        <tags>active</tags>
         <children xsi:type="basic:Part" xmi:id="_RsqygGmFEe6dZt5eBLnDAQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Dockerfile" iconURI="platform:/plugin/org.eclipse.ui.genericeditor/icons/full/obj16/generic_editor.png" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.ui.genericeditor.GenericEditor&quot; name=&quot;Dockerfile&quot; partName=&quot;Dockerfile&quot; title=&quot;Dockerfile&quot; tooltip=&quot;forumbackendspring/Dockerfile&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/forumbackendspring/Dockerfile&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;152&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
@@ -285,8 +285,6 @@
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>active</tags>
-          <tags>activeOnClose</tags>
         </children>
       </children>
     </sharedElements>
@@ -296,6 +294,8 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; currentWorkingSetName=&quot;Aggregate for window 1697006159055&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;>&#xD;&#xA;&lt;lastRecentlyUsedFilters/>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_kDnce2kIEe6Ar7yKiQ6GeA" elementId="org.eclipse.ui.navigator.ProjectExplorer">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -489,7 +489,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_kDoqzWkIEe6Ar7yKiQ6GeA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_FqnpEGtKEe6H3v5DB3kDrQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_kD5ximkIEe6Ar7yKiQ6GeA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_yis0sG0EEe6aKJNvGaByVw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_kD5ximkIEe6Ar7yKiQ6GeA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_kDoq2mkIEe6Ar7yKiQ6GeA" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -497,8 +497,8 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_kDoq3GkIEe6Ar7yKiQ6GeA" elementId="org.eclipse.ui.workbench.edit">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_FqqFUGtKEe6H3v5DB3kDrQ" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.png" tooltip="Undo" enabled="false" command="_kD38UGkIEe6Ar7yKiQ6GeA"/>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_FqqFUWtKEe6H3v5DB3kDrQ" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.png" tooltip="Redo" enabled="false" command="_kD4ixWkIEe6Ar7yKiQ6GeA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_yixtMG0EEe6aKJNvGaByVw" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.png" tooltip="Undo" enabled="false" command="_kD38UGkIEe6Ar7yKiQ6GeA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_yiy7UG0EEe6aKJNvGaByVw" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.png" tooltip="Redo" enabled="false" command="_kD4ixWkIEe6Ar7yKiQ6GeA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_kDoq4GkIEe6Ar7yKiQ6GeA" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -528,7 +528,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_kDpRzGkIEe6Ar7yKiQ6GeA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_FqrTcGtKEe6H3v5DB3kDrQ" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_kD5xKmkIEe6Ar7yKiQ6GeA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_yi1XkG0EEe6aKJNvGaByVw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_kD5xKmkIEe6Ar7yKiQ6GeA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_kDpR2GkIEe6Ar7yKiQ6GeA" elementId="SpringBootPropertyEditor" visible="false">
         <tags>Draggable</tags>
