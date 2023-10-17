@@ -1,0 +1,21 @@
+.footer {
+    background-color: #5A287D;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .social-icons {
+    margin-top: 10px;
+  }
+  
+  .icon {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .icon:hover {
+    color: #00aced; /* Change the color on hover (Twitter blue) */
+  }
+  

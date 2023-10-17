@@ -1,0 +1,20 @@
+/* ContactUs.css */
+
+/* Style the submit button with a purple background color */
+.button-purple {
+    background-color: #6a0dad; /* You can adjust the color as needed */
+    color: white;
+    border: none;
+  }
+  
+  /* Add some padding and margin to the button */
+  .button-purple {
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+  
+  /* On hover, darken the button */
+  .button-purple:hover {
+    background-color: purple; /* You can adjust the color as needed */
+  }
+  

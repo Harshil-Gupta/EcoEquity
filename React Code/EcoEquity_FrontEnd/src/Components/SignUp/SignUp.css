@@ -1,0 +1,132 @@
+.Form {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #5A287D;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.FormTitleContainer {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.FormTitle {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #5A287D;
+  margin-bottom: 20px;
+}
+
+.FormTitle::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: yellow;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.Form label {
+  color: #5A287D;
+  width: 100%;
+  text-align: left;
+}
+
+.Form input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #5A287D;
+  border-radius: 5px;
+}
+
+.Form button {
+  background-color: #5A287D;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Form button:hover {
+  background-color: purple;
+}
+
+.ModalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.Modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 70%;
+  z-index: 4;
+}
+
+.CloseButton {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.TermsText {
+  font-size: 14px;
+  color: #5A287D;
+  text-align: left;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .Modal {
+    width: 90%;
+  }
+}
+/* Add this CSS to style the checkbox and label on the same line */
+/* .CheckboxContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.CheckboxLabel {
+  color: #5A287D;
+  margin-left: 5px; 
+} */
+.FormContainer {
+  /* display: flex; */
+  padding-top: 150px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set the height to 100vh to cover the entire viewport height */
+  background-color: #5A287D;
+
+}
+

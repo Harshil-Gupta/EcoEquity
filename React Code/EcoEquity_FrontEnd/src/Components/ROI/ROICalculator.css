@@ -1,0 +1,89 @@
+/* ROICalculator.css */
+.ROICalculator{
+    background-color: #5A287D;
+    color: white;
+    font-family: Knile_Black,sans-serif;
+    font-weight: 700;
+}
+/* Center the calculator vertically */
+.mt-5 {
+    margin-top: 5rem;
+  }
+  
+  /* Style the input section */
+  .input-section {
+    background-color: #5A287D; /* Light gray background */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Purple button */
+  .purple {
+    background-color: #5A287D; /* Purple color */
+    border: none;
+    transition: background-color 0.2s ease-in-out;
+    color: white;
+    width: 100%;
+  }
+  
+  .purple:hover {
+    background-color: #d285e6;
+    color: black; /* Darker purple on hover */
+  }
+  
+  /* Style the result section */
+  .result-section {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the pie chart container */
+  .pie-chart-container {
+    margin: 0 auto;
+    width: 50%; /* Adjust the width as needed */
+    color: white;
+    background-color: white;
+  }
+  
+  /* Style the result table */
+  .result-table {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .result-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .result-table td {
+    padding: 8px 16px;
+    border: 1px solid #dcdcdc;
+  }
+  
+  .result-table td:first-child {
+    text-align: left;
+  }
+  
+  .result-table td:last-child {
+    text-align: right;
+  }
+  .pie-chart-container .chartjs-render-monitor .chartjs-legends .chartjs-legend ul li span {
+    color: white !important; /* Set the label font color to white */
+  }
+  .result-section-bg{
+    background-color: #5A287D;
+    color: white;
+  }
+  .containerofROI {
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 100px;
+    text-align: center;
+    font-family: Knile_Black,sans-serif;
+    font-weight: 700;
+    color: #5A287D;
+  }
+  

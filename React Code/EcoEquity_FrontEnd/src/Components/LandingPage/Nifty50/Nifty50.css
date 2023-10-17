@@ -1,0 +1,53 @@
+.Nifty50{
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 32px;
+    font-family: Knile_Black,sans-serif;
+    font-weight: 700;
+
+}
+.Nifty50-h1{
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* StockROI.css */
+.CardTitle{
+    color: #5A287D;
+}
+
+.card1:hover {
+    transform: scale(1.05); /* Scale up the card on hover */
+    transition: transform 0.2s ease-in-out; /* Add a smooth transition effect */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Add a box shadow on hover */
+  }
+/* .chart-container{
+    border: 2px solid black;
+    background-color: #e2d6eb;
+    justify-content: center;
+    align-items: center; 
+    color: red;
+    width: 40%;
+} */
+.Chart-box{
+    background-color: #5A287D;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+.SymbolOverview {
+    width: 20%; /* Ensure it takes the full width of its container */
+    height: 100%; /* Ensure it takes the full height of its container */
+  }
+
+ .Nifty50 button{
+    background-color: blue;
+    color: white;
+ }
+ .Nifty50 button:hover{
+    background-color: purple;
+    color: white;
+ }

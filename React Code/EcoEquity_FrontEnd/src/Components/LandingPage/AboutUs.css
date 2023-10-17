@@ -1,0 +1,53 @@
+/* CSS for CardContainer component */
+
+/* Style for expanded card */
+/* .expanded {
+    max-height: 1000px; /* Adjust the value as needed to fit your content 
+    transition: max-height 0.3s ease-in-out;
+  } */
+  
+  /* Style for card titles */
+  .CardTitle {
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .CardTitle:hover {
+    color: purple; /* Change color on hover (you can customize this color) */
+  }
+  
+  /* Style for card descriptions */
+  .description {
+    display: none;
+    margin-top: 10px;
+    font-size: 0.875rem;
+  }
+  
+  .description.show {
+    display: block;
+  }
+  
+  /* Custom styling for Heading and CardText */
+  .Heading {
+    font-family: Knile_Black, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 48px !important;
+    line-height: 50px !important;
+    margin: 0 0 32px 0 !important;
+    color: #5A287D;
+  }
+  
+  .CardText {
+    color: #5A286D;
+    font-family: Knile_Black, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 18px !important;
+    margin: 0 0 12px 0 !important;
+  }
+  .Card{
+    background-color: #d9cbee;
+  }
+  

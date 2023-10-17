@@ -1,0 +1,88 @@
+/* StockTable.css */
+
+.container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .stock-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .stock-table th,
+  .stock-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .stock-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .purple-text {
+    color: purple;
+  }
+  
+  .change-text.up {
+    color: green;
+  }
+  
+  .change-text.down {
+    color: red;
+  }
+  
+  .chart-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .chart-div {
+    display: none;
+  }
+  .HeadingOfTable{
+    color: #5A287D;
+    font-family: Knile_Black,sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 28px!important;
+    margin: 0 0 20px 0!important;
+  }
+  /* CustomDropdown.scss */
+/* styles.css */
+.dropdown-container {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.dropdown-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.custom-dropdown {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.custom-dropdown .dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+
+
+
+  

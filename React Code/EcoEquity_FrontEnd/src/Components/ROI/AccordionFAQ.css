@@ -1,0 +1,51 @@
+/* Accordion container */
+.accordion {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Knile_Black,sans-serif;
+    font-weight: 700;
+  }
+  
+  /* Accordion items */
+  .accordion-item {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  /* Accordion headers */
+  .accordion-header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* Style for open accordion items */
+  .accordion-item.open .accordion-header {
+    background-color: #5A287D; /* Change to your desired color */
+    color: white;
+  }
+  
+  /* Accordion content */
+  .accordion-content {
+    display: none;
+    padding: 10px;
+  }
+  
+  /* Style for open accordion content */
+  .accordion-item.open .accordion-content {
+    display: block;
+    background-color: #f0f0f0;
+  }
+  
+  /* Style for question text */
+  .accordion h3 {
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  /* Style for answer text */
+  .accordion p {
+    margin: 0;
+    padding-top: 10px;
+  }
+  

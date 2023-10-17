@@ -1,0 +1,15 @@
+/* Navbar.css */
+.custom-navbar-container {
+  background-color: #5A287D; /* Set the default background color for the Navbar */
+}
+
+.custom-navbar-container .active {
+  background-color: #d6a6f9 !important; /* Set the background color of the active link to green */
+  color: black !important; /* Set the text color of the active link to white */
+  border-radius: 10% 10% 10% 10%;
+}
+.custom-navbar-container{
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
