@@ -1,0 +1,11 @@
+package Capstone.stockdetail.Repository;
+import java.util.List;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import Capstone.stockdetail.Model.StockDetail;
+
+public interface StockDetailRepository extends MongoRepository<StockDetail, String> {
+	List<StockDetail> findByUsername(String userId);
+}
+

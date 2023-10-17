@@ -1,0 +1,124 @@
+package Capstone.stockdetail.Service;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import Capstone.stockdetail.Model.StockDetail;
+import Capstone.stockdetail.Repository.StockDetailRepository;
+
+@Service
+public class StockDetailService {
+
+    private final StockDetailRepository stockDetailRepository;
+
+    @Autowired
+    public StockDetailService(StockDetailRepository stockDetailRepository) {
+        this.stockDetailRepository = stockDetailRepository;
+    }
+
+    public StockDetail createStock(StockDetail stockDetail) {
+    	int temp = getStocksOwnedByUser(stockDetail.getUsername(), stockDetail.getStockName());
+    	if(stockDetail.getType().equalsIgnoreCase("Buy")) {
+    		
+    		int newQuantity = temp+stockDetail.getQuantity();
+    		System.out.println("Total stocks now: " +  newQuantity);
+    		
+    		
+    		double newPrice = stockDetail.getStockPrice();
+    		newPrice = 100;
+    		System.out.println("Current Invested Price per share for "+ stockDetail.getQuantity() + " shares: " +  newPrice);
+    		
+    		int prevQuantity = stockDetail.getQuantity();
+    		System.out.println("Prev owned stocks: " +  temp);
+    		
+    		double previousBuyAvg = getAvgStockPriceByUser(stockDetail.getUsername(),stockDetail.getStockName());
+    		System.out.println("Prev Buy Avg Price from getAvgStockPricebyUser function: " + getAvgStockPriceByUser(stockDetail.getUsername(),stockDetail.getStockName()));
+    		
+    		double newAverage = (prevQuantity*previousBuyAvg) + (temp*newPrice);
+    		newAverage = newAverage/newQuantity;
+    		if(previousBuyAvg <= 0) {
+    			newAverage = stockDetail.getStockPrice();
+    		}
+    		System.out.println("New Buy Average: " +  newAverage);
+    		
+    		stockDetail.setAverageBuyPrice(newAverage);
+    		stockDetail.setOwnedStocks(newQuantity);
+    	}
+    	else if(stockDetail.getType().equalsIgnoreCase("Sell")) {
+    		stockDetail.setOwnedStocks(temp - stockDetail.getQuantity());
+    	}
+        return stockDetailRepository.save(stockDetail);
+    }
+    
+    public List<StockDetail> getStocksForUser(String username) {
+        List<StockDetail> userStocks = stockDetailRepository.findByUsername(username);
+    	for (StockDetail stock : userStocks) {
+    		System.out.println(stock.toString());
+    	}
+    	return userStocks;
+    }
+    
+    public void updateOwnedStocks(String stockId, int counter) {
+        Optional<StockDetail> optionalStockDetail = stockDetailRepository.findById(stockId);
+
+        if (optionalStockDetail.isPresent()) {
+            StockDetail stockDetail = optionalStockDetail.get();
+            stockDetail.setOwnedStocks(counter);
+            stockDetailRepository.save(stockDetail);
+            System.out.println("Updated StockDetail: " + stockDetail.toString());
+        } else {
+            System.out.println("No StockDetail found for stockId: " + stockId);
+        }
+    }
+
+    
+    public int getStocksOwnedByUser(String username, String stockname) {
+    	List<StockDetail> ownedstocks = stockDetailRepository.findByUsername(username);
+    	
+    	int counter = 0;
+    	String stockId = "";
+    	for (StockDetail stock : ownedstocks) {
+    		if (stock.getStockName().equals(stockname) && stock.getType().equalsIgnoreCase("Buy")) {
+                counter = counter + stock.getQuantity();
+            }
+            if(stock.getStockName().equals(stockname) && stock.getType().equalsIgnoreCase("Sell")) {
+                counter = counter - stock.getQuantity();
+            }
+            stockId = stock.getStockId();
+            updateOwnedStocks(stockId,counter);
+    	}
+        return counter;
+    }
+     
+    public List<StockDetail> getAllStocks() {
+        return stockDetailRepository.findAll();
+    }
+
+	public double getAvgStockPriceByUser(String username, String stockname) {
+    	List<StockDetail> ownedstocks = stockDetailRepository.findByUsername(username);
+    	if(ownedstocks.isEmpty()) {
+    		System.out.println("Empty ownedStocks");
+    		return -1.0;
+    	}
+    	StockDetail lastStock = ownedstocks.get(ownedstocks.size() - 1);
+    	double avgPrice = lastStock.getAverageBuyPrice();
+    	return avgPrice;
+	}
+    
+//  public List<StockDetail> getAllStocksOwnedByUser(String username) {
+//	List<StockDetail> ownedstocks = stockDetailRepository.findByUsername(username);
+//	int counter = 0;
+//	for (StockDetail stock : ownedstocks) {
+//        if (stock.getStockName().equals(stockname) && stock.getType().equalsIgnoreCase("Buy")) {
+//            counter = counter + stock.getQuantity();
+//        }
+//        else if(stock.getStockName().equals(stockname) && stock.getType().equalsIgnoreCase("Sell")) {
+//            counter = counter - stock.getQuantity();
+//        }
+//    }
+//    return counter;
+//}
+}
+

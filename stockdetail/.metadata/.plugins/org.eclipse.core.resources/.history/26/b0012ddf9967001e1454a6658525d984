@@ -1,0 +1,34 @@
+package Capstone.stockdetail.Service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+
+import Capstone.stockdetail.Model.StockDetail;
+import Capstone.stockdetail.Repository.StockDetailRepository;
+
+public class StockDetailService2 {
+	
+	private StockDetailRepository stockDetailRepository;
+
+    @Autowired
+    public void StockDetailService(StockDetailRepository stockDetailRepository) {
+        this.stockDetailRepository = stockDetailRepository;
+    }
+    
+    public StockDetail createStock(StockDetail stockdetail) {
+        return stockDetailRepository.save(stockdetail);
+    }
+    public List<StockDetail> getStocksForUser(String username) {
+        List<StockDetail> userStocks = stockDetailRepository.findByUsername(username);
+    	for (StockDetail stock : userStocks) {
+    		System.out.println(stock.toString());
+    	}
+    	return userStocks;
+    }
+    public List<StockDetail> getAllStocks() {
+        return stockDetailRepository.findAll();
+    }
+    
+}

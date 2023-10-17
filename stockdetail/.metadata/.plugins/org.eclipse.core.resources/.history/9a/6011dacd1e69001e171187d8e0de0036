@@ -1,0 +1,16 @@
+ 		
+version: "3"
+services:
+  stockdetaildatabase:
+   image: mongo:latest
+   container_name: "ecoequity"
+   ports:
+    - 27017:27017
+  
+  springboot-mongodb:
+   image: springboot-mongo-docker
+   container_name: "ecoequity"
+   ports:
+    - 8089:8089
+  links:
+    - ecoequity

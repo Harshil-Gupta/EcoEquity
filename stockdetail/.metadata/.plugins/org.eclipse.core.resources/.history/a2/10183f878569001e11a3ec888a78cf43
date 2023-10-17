@@ -1,0 +1,15 @@
+version: "5"
+services:
+  ecoequity:
+   image: mongo:latest
+   container_name: "ecoequity"
+   ports:
+    - 27017:27017 
+  
+  springdockercompose:
+   image: springdockercompose2:latest
+   container_name: "springdockercompose2"
+   ports:
+    - 9090:8086  
+   links:
+    - ecoequity
